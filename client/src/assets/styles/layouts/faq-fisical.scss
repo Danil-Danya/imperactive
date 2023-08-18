@@ -1,0 +1,55 @@
+.fisics {
+    &__container {
+        background: url(@/assets/images/faq/fisics.jpg);
+        //background-attachment:  fixed;
+        padding: 50px 0;
+    }
+
+    &__accordion {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        border: 1px solid $white;
+        border-left: 10px solid $red;
+        min-height: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        cursor: pointer;
+        width: 100%;
+        transition: height 500ms;
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 30px;
+    }
+
+    &__question {
+        color: $white;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+    }
+    // &__border {
+    //     display: block;
+    //     width: 50px;
+    //     height: 50px;
+    //     background: $red;
+    // }
+}

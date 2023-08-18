@@ -1,0 +1,28 @@
+{
+  "name": "imperactive",
+  "version": "1.0.0",
+  "description": "The site for logystic company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node server/index.js",
+    "dev": "cd client && npm run build && cd .. && nodemon --exec babel-node server/index.js --watch client"
+  },
+  "author": " <Daniel Sabitov>",
+  "license": "ISC",
+  "dependencies": {
+    "connect-history-api-fallback": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.2",
+    "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
+    "@babel/preset-env": "^7.22.9",
+    "concurrently": "^8.2.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

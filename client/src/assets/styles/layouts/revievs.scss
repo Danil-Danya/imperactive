@@ -1,0 +1,279 @@
+.revievs {
+    margin-bottom: 50px;
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px;
+    }
+
+    &__container {
+        &-star > ul {
+            display: flex;
+        }
+
+        &-slider {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-button {
+            max-width: 940px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-all {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    &__line {
+        display: block;
+        background: $white;
+        width: 100%;
+        height: 1px;
+        margin-top: 20px;
+    }
+
+    &__title {
+        max-width: 241px;
+        width: 100%;
+    }
+
+    &__text {
+        color: $black;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: normal;
+        max-width: 523px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    &__item {
+        max-width: 940px;
+        width: 100%;
+        &-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 940px;
+            width: 100%;
+            
+            @include media ($md) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        &-right {
+            background: $blue;
+            width: 600px;
+            padding: 50px 20px;
+
+            @include media ($xs) {
+                max-width: 600px;
+                width: 100%;
+            }
+        }
+
+        &-comment {
+            margin-top: 30px;
+        }
+
+        &-left {
+            @include media ($md) {
+                width: 100%;
+                background: $red;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &-title {
+            color: $white;
+            font-family: Roboto;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        &-person {
+            color: $white;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &-tel {
+            margin-right: 20px;
+        }
+
+        &-tel, &-email {
+            color: $white;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &-text {
+            color: $white;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            max-width: 545px;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        list-style: none;
+
+        & > a {
+            display: block;
+            width: 100%;
+            display: flex;
+            height: 55px;
+            justify-content: center;
+            align-items: center;
+            background: $brown;
+            border-right: 1px solid $white;
+            color: $white;
+
+            &:hover {
+                background: #e89f01ef;
+            }
+        }
+    }
+
+    &__img {
+        @include media ($md) {
+            width: 100%;
+        }
+    }
+
+    // код для общих коментариев:
+
+    &__form {
+        padding: 80px 0 30px 0;
+        margin: 0 auto;
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        display: block;
+        max-width: 450px;
+        width: 100%;
+        height: 50px;
+        border: 3px solid #ff8a00;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: #000;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-left: 20px;
+
+        &:focus {
+            outline: none;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        }
+
+        &-container {
+            max-width: 450px;
+            width: 100%;
+        }
+    }
+
+    &__textarea {
+        display: block;
+        max-width: 500px;
+        width: 100%;
+        height: 250px;
+        border: 3px solid #ff8a00;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        color: #000;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &:focus {
+            outline: none;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        }
+
+        &[type="text"] {
+            padding: 20px;
+        }
+
+        &-p {
+            padding: 20px;
+        }
+    }
+
+    &__button {
+        width: 200px;
+        height: 60px;
+        background: red;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 500ms;
+
+        &-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &:hover {
+            background: #000;
+        }
+    }
+
+    &__label {
+        display: block;
+        color: #000;
+        font-family: Roboto;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+}

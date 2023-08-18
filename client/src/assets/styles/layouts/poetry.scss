@@ -1,0 +1,83 @@
+.poetry {
+    margin-bottom: 50px;
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 0;
+
+        @include media ($md) {
+            overflow: hidden;
+        }
+
+        &-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            @include media ($md) {
+                justify-content: center;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 525px;
+        width: 100%;
+        text-align: center;
+        color: $black;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: normal;
+        margin-top: 30px;
+    }
+    
+    &__item {
+        display: flex;
+        border-radius: 10px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+        @include media ($md) {
+            justify-content: center;
+        }
+        
+        &-text {
+            width: 270px;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            color: $white;
+        }
+    }
+    
+    &__container {
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            background: $blue;
+            border-radius: 10px;
+
+            @include media ($md) {
+                max-width: 340px;
+                width: 100%;
+                padding: 30px 0;
+            }    
+        }
+    }
+
+    &__img {
+        max-width: 340px;
+        width: 100%;
+    }
+}

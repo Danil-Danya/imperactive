@@ -1,0 +1,96 @@
+$C: "Comfortaa";
+$R: "Roboto";
+$M: "Montserrat";
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    display: block;
+    background: #ff0000;
+    width: 10px;
+    height: 50px;
+}
+
+::selection {
+    background: #ff0000;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1360px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.title {
+    display: block;
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: $red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: $red;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @include media ($xs) {
+        font-size: 30px;
+    }
+}
+
+.accordion {
+    &__answer {
+        color: $white;
+        font-family: $R;
+        font-style: italic;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-weight: 300;
+        transition: 500ms;
+    }
+}

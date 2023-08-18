@@ -1,0 +1,92 @@
+.header {
+    margin-top: 53px;
+
+    &__container {
+        background: url(@/assets/images/header/header-background.png) no-repeat center center /cover;
+        height: 100vh;
+
+        &-button {
+            display: flex;
+            justify-content: space-between;
+            max-width: 510px;
+            width: 100%;
+            margin-top: 30px;
+
+            @include media ($nb) {
+                justify-content: center;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 53px);
+
+        @include media ($nb) {
+            align-items: center;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include media ($md) {
+            font-size: 42px;
+        }
+
+        @include media ($sm) {
+            font-size: 32px;
+            text-align: center;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 225px;
+        height: 60px;
+        background: $red;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        transition: all 500ms;
+
+        @include media ($sm) {
+            width: 200px;
+            height: 50px;
+        }
+
+        @include media ($xs) {
+            margin: 5px;
+        }
+
+        &:hover {
+            background: $white;
+            color: $red;
+        }
+    }
+}
+
+.button-white {
+    background: none !important;
+    border: 3px solid $white;
+
+    &:hover {
+        border: 3px solid $red;
+    }
+}
+
+.title-mini {
+    @include media ($xs) {
+        font-size: 20px;
+        text-align: center;
+    }
+}

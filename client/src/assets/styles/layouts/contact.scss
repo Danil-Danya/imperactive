@@ -1,0 +1,145 @@
+.contacts {
+    &__container {
+        background: $blue;
+        padding: 50px 0;
+    }
+
+    &__title {
+        color: $white;
+        width: 170px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+
+        @include media ($lg) {
+            flex-wrap: wrap;
+        }
+
+        @include media ($md) {
+            justify-content: center;
+        }
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__icon {
+        &-container, &-container > ul {
+            display: flex;
+            justify-content: space-between;
+            max-width: 200px;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        display: block;
+        color: $white;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: $lightBlue;
+        flex-direction: column;
+    }
+
+    &__text {
+        color: $white;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        max-width: 380px;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    &__input {
+        border-radius: 4px;
+        width: 290px;
+        height: 50px;
+        border: 1px solid #ff8a00;
+        background: #04001C;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
+        color: $white;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-left: 20px;
+
+        &::placeholder {
+            color: $white;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__select {
+        color: $white;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding-left: 20px;
+    }
+
+    &__message {
+        border-radius: 4px;
+        border: 1px solid #FF8A00;
+        margin: 0 !important;
+        background: #04001C;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+        height: 102px;    
+
+        &::placeholder {
+            padding: 10px 20px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        border-radius: 0px 0px 10px 10px;
+        background: $red;
+        height: 60px;
+        color: $white;
+        font-family: Roboto;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: all 500ms;
+        cursor: pointer;
+
+        &:hover {
+            color: $red;
+            background: $white;
+        }
+    }
+}
